@@ -30,6 +30,6 @@ app.get('/model/:name', (req, res) => {
         res.json(products['unknown']);
     }
 })
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log(`Server running on port ${PORT}`);
 })
